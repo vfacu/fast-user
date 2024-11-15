@@ -19,7 +19,7 @@ class UsersController:
             # TODO: implementar logging
             raise ex
         except Exception:
-            # TODO log: Error no contemplado en ProjectsController.create
+            # TODO log: Error no contemplado en usersController.create
             raise InternalServerError()
 
     def get_list(self, limit: int, offset: int) -> List[UserResponse]:
@@ -31,19 +31,19 @@ class UsersController:
             # TODO: implementar logging
             raise ex
         except Exception:
-            # TODO log: Error no contemplado en ProjectsController.create
+            # TODO log: Error no contemplado en usersController.create
             raise InternalServerError()
 
     def get_by_id(self, id: int) -> UserResponse:
         try:
             # TODO: llamar a la capa de servicio para que gestione la acción correspondiente
             # ejemplo de error
-            raise NotFound(f'Proyecto #{id} no encontrado.')
+            raise NotFound(f'Usuario #{id} no encontrado.')
         except BaseHTTPException as ex:
             # TODO: implementar logging
             raise ex
         except Exception:
-            # TODO log: Error no contemplado en ProjectsController.create
+            # TODO log: Error no contemplado en usersController.create
             raise InternalServerError()
 
     def update(self, id: int, new_data: UserRequest) -> UserResponse:
@@ -55,7 +55,7 @@ class UsersController:
             # TODO: implementar logging
             raise ex
         except Exception:
-            # TODO log: Error no contemplado en ProjectsController.create
+            # TODO log: Error no contemplado en usersController.create
             raise InternalServerError()
 
     def delete(self, id: int) -> None:
@@ -66,5 +66,5 @@ class UsersController:
             # TODO: implementar logging
             raise ex
         except Exception:
-            # TODO log: Error no contemplado en ProjectsController.create
+            # TODO log: Error no contemplado en usersController.create
             raise InternalServerError()

@@ -19,7 +19,7 @@ controller = UsersController()
         201: {'description': 'Proyecto creado'},
     },
     description='Crea un proyecto nuevo con los campos pasados por Body Param. Falla si faltan alguno de los campos obligatorios.'
-)  # POST /projects
+)  # POST /users
 async def create(new_user: NewUserRequest) -> UserResponse:
     # recibir un objeto
     return controller.create(new_user)
@@ -31,7 +31,7 @@ async def create(new_user: NewUserRequest) -> UserResponse:
         200: {'description': 'Listado de proyectos'},
     },
     description='Retorna una lista paginada con los proyectos del usuario. Si no hay proyectos para mostrar, retorna lista vacía.'
-)  # GET /projects
+)  # GET /users
 async def get_list(limit: Annotated[int, Query(ge=1, le=1000)] = 10, offset: Annotated[int, Query(ge=0)] = 0) -> List[UserResponse]:
     print(f'Paginado limite {limit} y offset {offset}')
     return controller.get_list(limit, offset)
@@ -45,7 +45,7 @@ async def get_list(limit: Annotated[int, Query(ge=1, le=1000)] = 10, offset: Ann
         422: {'description': 'ID no es un entero válido'},
     },
     description='Retorna un proyecto por ID. Falla si el ID no existe.'
-)  # GET /projects/{id}
+)  # GET /users/{id}
 async def get_by_id(id: Annotated[int, Path(ge=1)]) -> UserResponse:
     return controller.get_by_id(id)
 
@@ -59,7 +59,7 @@ async def get_by_id(id: Annotated[int, Path(ge=1)]) -> UserResponse:
         422: {'description': 'ID no es un entero válido'},
     },
     description='Actualiza un proyecto con la data del Body Param. Falla si el ID no existe.'
-)  # PATCH /projects/{id}
+)  # PATCH /users/{id}
 async def update(id: Annotated[int, Path(ge=1)], user: UserRequest) -> UserResponse:
     return controller.update(id, user)
 
@@ -73,6 +73,6 @@ async def update(id: Annotated[int, Path(ge=1)], user: UserRequest) -> UserRespo
         422: {'description': 'ID no es un entero válido'},
     },
     description='Elimina un proyecto con id pasado por Path Param. Falla si el ID no existe.'
-)  # DELETE /projects/{id}
+)  # DELETE /users/{id}
 async def delete(id: Annotated[int, Path(ge=1)]) -> None:
     controller.delete(id)
