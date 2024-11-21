@@ -18,7 +18,7 @@ def config_logger(debug_level: bool) -> None:
         interval=1,
         backupCount=0,
     )
-    handler.suffix = '%Y%m%d' # user-project.log20241025
+    handler.suffix = '%Y%m%d'  # user-project.log20241025
 
     formatter = logging.Formatter(
         '%(asctime)s - %(name)s - %(levelname)s - %(message)s',

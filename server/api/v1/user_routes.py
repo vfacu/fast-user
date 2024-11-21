@@ -12,6 +12,7 @@ router.responses = {
 }
 controller = UsersController()
 
+
 @router.post(
     '',
     status_code=201,
@@ -24,6 +25,7 @@ async def create(new_user: NewUserRequest) -> UserResponse:
     # recibir un objeto
     return controller.create(new_user)
 
+
 @router.get(
     '',
     status_code=200,
@@ -35,6 +37,7 @@ async def create(new_user: NewUserRequest) -> UserResponse:
 async def get_list(limit: Annotated[int, Query(ge=1, le=1000)] = 10, offset: Annotated[int, Query(ge=0)] = 0) -> List[UserResponse]:
     print(f'Paginado limite {limit} y offset {offset}')
     return controller.get_list(limit, offset)
+
 
 @router.get(
     '/{id}',

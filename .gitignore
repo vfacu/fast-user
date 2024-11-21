@@ -5,7 +5,8 @@ env
 # Python files
 **/__pycache__
 
-#Secrets
+# Secrets
 .env
 
 # Logs
+logs
