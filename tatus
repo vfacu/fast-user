@@ -1,0 +1,29 @@
+[33mcommit 2e692a872a7ffc8df4f9af6733f240e1b6f507fa[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: Facundo <vfacu@hotmail.com>
+Date:   Thu Nov 21 20:32:31 2024 -0300
+
+    implementar cliente de api externa con requests
+
+[33mcommit 7b9273fa1e5f262eb6291c6f77157ea7658bf5f5[m[33m ([m[1;33mtag: v0.1.0[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Facundo <vfacu@hotmail.com>
+Date:   Wed Nov 20 21:34:16 2024 -0300
+
+    Rutas y Params, Controladores, Servicios, Variables de entorno y Logging
+
+[33mcommit aa441524549f83231466c9a237f0b6aa668fb375[m
+Author: Facu <vfacu@hotmail.com>
+Date:   Fri Nov 15 13:07:55 2024 -0300
+
+    agrego logging
+
+[33mcommit d371e9526b80fc3295e84b9665eadcf924ee3d10[m
+Author: Facu <vfacu@hotmail.com>
+Date:   Fri Nov 15 10:53:11 2024 -0300
+
+    se agrega sevicios
+
+[33mcommit 70a7b7aeb93d5b0a622e131b87aac3fc62b7e238[m
+Author: Facu <vfacu@hotmail.com>
+Date:   Wed Nov 13 18:38:54 2024 -0300
+
+    incluye capas shcemas, exceptions, controller
