@@ -3,8 +3,10 @@ fastapi==0.115.2
 uvicorn==0.32.0
 pydantic[email] == 2.9.2
 
-#Data
-requests==2.32.2
+# Data
+requests==2.32.3
+SQLAlchemy==2.0.36
+psycopg2-binary==2.9.10
 
 #Config
 pydantic-settings==2.6.0

@@ -27,8 +27,9 @@ class UsersController:
             return self.service.get_list(limit, offset)
         except BaseHTTPException as ex:
             self.__handler_http_exception(ex)
-        except Exception:
-            logger.critical(f'Error no contemplado en {__name__}.get_list()')
+        except Exception as ex:
+            logger.critical(
+                f'Error no contemplado en {__name__}.get_list(): ' + str(ex))
             raise InternalServerError()
 
     def get_by_id(self, id: int) -> UserResponse:
