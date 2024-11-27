@@ -3,7 +3,7 @@ from pydantic_settings import BaseSettings
 
 class Settings(BaseSettings):
     # API
-    PORT: int = 8000
+    PORT: int = 8080
     DEV: bool = False
 
     # External Data
